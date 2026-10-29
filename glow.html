@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girlhood Planner | Glow</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body data-page="glow">
+
+    <header class="site-header">
+        <a href="bloom.html" class="brand">♡ Girlhood Planner</a>
+
+        <nav class="main-nav">
+            <a href="bloom.html">Bloom</a>
+            <a href="petals.html">My Tasks</a>
+            <a href="glow.html" class="active">Daily Glow</a>
+            <button type="button" class="logout-button" id="logoutButton">Log Out</button>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <section class="welcome-section">
+            <p class="eyebrow">A MOMENT FOR YOURSELF</p>
+            <h1>Your Daily Glow ♡</h1>
+            <p>Rest when you need to. Keep going when you're ready.</p>
+        </section>
+
+        <section class="motivation-card">
+            <span class="big-flower">✿</span>
+            <p class="eyebrow">TODAY'S REMINDER</p>
+            <h2 id="dailyMotivation">You do not have to do everything at once.</h2>
+            <button type="button" class="secondary-button" id="newMotivation">
+                Give Me Another Reminder
+            </button>
+        </section>
+
+        <section class="content-card">
+            <p class="eyebrow">SAY IT WITH ME</p>
+            <h2>Little Affirmations</h2>
+
+            <ul class="affirmation-list">
+                <li>I am allowed to learn at my own pace.</li>
+                <li>My progress matters, even when it is small.</li>
+                <li>I can take breaks without feeling guilty.</li>
+                <li>I am more than my grades and achievements.</li>
+                <li>With patience and effort, I can keep growing.</li>
+            </ul>
+        </section>
+
+        <section class="verse-card">
+            <p class="eyebrow">VERSE OF THE DAY</p>
+            <h2 id="glowVerse">"Be still, and know that I am God."</h2>
+            <p id="glowVerseReference">Psalm 46:10</p>
+        </section>
+
+        <section class="content-card reflection-card">
+            <p class="eyebrow">CHECK IN WITH YOURSELF</p>
+            <h2>Today's Little Reflection</h2>
+            <p>What is one thing you're thankful for today?</p>
+
+            <textarea id="dailyReflection" rows="5" placeholder="Write your thoughts here..."></textarea>
+
+            <div class="reflection-actions">
+                <button type="button" class="primary-button" id="saveReflection">
+                    Save Reflection
+                </button>
+                <button type="button" class="secondary-button" id="clearReflection">
+                    Clear
+                </button>
+            </div>
+
+            <p id="reflectionMessage" class="message"></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">You deserve the same kindness you give others. ♡</footer>
+
+</body>
+</html>

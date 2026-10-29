@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girlhood Planner | Bloom</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body data-page="bloom">
+
+    <header class="site-header">
+        <a href="bloom.html" class="brand">♡ Girlhood Planner</a>
+
+        <nav class="main-nav">
+            <a href="bloom.html" class="active">Bloom</a>
+            <a href="petals.html">My Tasks</a>
+            <a href="glow.html">Daily Glow</a>
+            <button type="button" class="logout-button" id="logoutButton">Log Out</button>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <section class="welcome-section">
+            <p class="eyebrow">YOUR LITTLE CORNER</p>
+            <h1>Welcome, <span id="welcomeName">Lovely</span> ♡</h1>
+            <p>Take things one step at a time. You're doing your best.</p>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <span class="stat-icon">♡</span>
+                <p>Total Tasks</p>
+                <h2 id="totalTasks">0</h2>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">✿</span>
+                <p>Completed</p>
+                <h2 id="completedTasks">0</h2>
+            </article>
+
+            <article class="stat-card">
+                <span class="stat-icon">☆</span>
+                <p>Still To Do</p>
+                <h2 id="pendingTasks">0</h2>
+            </article>
+        </section>
+
+        <section class="dashboard-grid">
+            <article class="content-card">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">YOUR PROGRESS</p>
+                        <h2>Little Steps Count</h2>
+                    </div>
+                </div>
+
+                <div class="progress-info">
+                    <span>Tasks completed</span>
+                    <strong id="progressPercent">0%</strong>
+                </div>
+
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+
+                <div class="chart-container" id="taskChart">
+                    <div class="chart-bar-group">
+                        <div class="chart-bar" id="completedBar"></div>
+                        <span>Completed</span>
+                    </div>
+
+                    <div class="chart-bar-group">
+                        <div class="chart-bar pending-bar" id="pendingBar"></div>
+                        <span>Pending</span>
+                    </div>
+                </div>
+
+                <a href="petals.html" class="secondary-button">Manage My Tasks</a>
+            </article>
+
+            <article class="content-card">
+                <p class="eyebrow">PLAN YOUR DAYS</p>
+                <h2>My Calendar</h2>
+
+                <div class="calendar-header">
+                    <button type="button" id="previousMonth" aria-label="Previous month">‹</button>
+                    <h3 id="calendarMonth">Month Year</h3>
+                    <button type="button" id="nextMonth" aria-label="Next month">›</button>
+                </div>
+
+                <div class="calendar-grid" id="calendarGrid"></div>
+                <p class="small-note">Days with a pink dot have a task due.</p>
+            </article>
+        </section>
+
+        <section class="verse-card">
+            <p class="eyebrow">A LITTLE REMINDER FROM GOD</p>
+            <h2 id="verseText">"I can do all things through Christ who strengthens me."</h2>
+            <p id="verseReference">Philippians 4:13</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">Grow at your own pace. ♡</footer>
+
+</body>
+</html>

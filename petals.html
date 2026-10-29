@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girlhood Planner | Petals</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body data-page="petals">
+
+    <header class="site-header">
+        <a href="bloom.html" class="brand">♡ Girlhood Planner</a>
+
+        <nav class="main-nav">
+            <a href="bloom.html">Bloom</a>
+            <a href="petals.html" class="active">My Tasks</a>
+            <a href="glow.html">Daily Glow</a>
+            <button type="button" class="logout-button" id="logoutButton">Log Out</button>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <section class="welcome-section">
+            <p class="eyebrow">ONE THING AT A TIME</p>
+            <h1>My Little To-Do List ✿</h1>
+            <p>Every small task you finish is a little win.</p>
+        </section>
+
+        <section class="task-toolbar">
+            <div>
+                <label for="taskSearch">Search tasks</label>
+                <input type="search" id="taskSearch" placeholder="Find a task...">
+            </div>
+
+            <div>
+                <label for="taskFilter">Show</label>
+                <select id="taskFilter">
+                    <option value="all">All Tasks</option>
+                    <option value="pending">Pending</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+
+            <button type="button" class="primary-button add-task-button" id="openTaskDialog">
+                + Add Task
+            </button>
+        </section>
+
+        <section class="content-card">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">YOUR PLANS</p>
+                    <h2>Tasks for Today and Beyond</h2>
+                </div>
+                <span id="taskCountLabel" class="task-count-label">0 tasks</span>
+            </div>
+
+            <div id="taskList" class="task-list"></div>
+            <p id="emptyTasksMessage" class="empty-message">
+                No tasks here yet. Add a little goal to get started! ♡
+            </p>
+        </section>
+    </main>
+
+    <dialog id="taskDialog" class="task-dialog">
+        <form id="taskForm">
+            <div class="dialog-heading">
+                <div>
+                    <p class="eyebrow">MAKE IT HAPPEN</p>
+                    <h2>Add a New Task</h2>
+                </div>
+                <button type="button" class="close-dialog" id="closeTaskDialog" aria-label="Close">×</button>
+            </div>
+
+            <label for="taskTitle">Task Name</label>
+            <input type="text" id="taskTitle" placeholder="What do you need to do?" required>
+
+            <label for="taskCategory">Category</label>
+            <select id="taskCategory" required>
+                <option value="School">School</option>
+                <option value="Personal">Personal</option>
+                <option value="Home">Home</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="taskPriority">Priority</label>
+            <select id="taskPriority" required>
+                <option value="Low">Low</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <label for="taskDate">Due Date</label>
+            <input type="date" id="taskDate" required>
+
+            <div class="dialog-actions">
+                <button type="button" class="secondary-button" id="cancelTask">Cancel</button>
+                <button type="submit" class="primary-button">Save Task</button>
+            </div>
+
+            <p id="taskFormMessage" class="message"></p>
+        </form>
+    </dialog>
+
+    <footer class="site-footer">Little by little, a little becomes a lot. ♡</footer>
+
+</body>
+</html>
